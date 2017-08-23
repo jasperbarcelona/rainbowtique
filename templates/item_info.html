@@ -1,0 +1,22 @@
+<div id="info-left">
+	<span class="labels">{{item.name}} | &#8369;{{item.price}}</span><br class="extra-break"><br class="extra-break">
+	<img id="modal-item-image" src="{{item.image}}">
+</div>
+<div id="info-right">
+	<span id="close-modal-btn" onclick="close_modal()">&times;</span>
+	<span class="modal-item-name labels">{{item.name}}</span>
+	<span class="modal-item-price">&#8369;{{item.price}}</span>
+	<div class="modal-item-desc">{{item.description}}</div>
+	<div class="modal-item-size-container">
+		<span class="modal-item-size-label labels">Available Sizes</span><br /><br />
+		<span id="28" class="modal-item-size modal-item-size-active" value="28" onclick="select_size(this.id)">28</span>
+		<div id="29" class="modal-item-size" value="29" onclick="select_size(this.id)">29</div>
+		<div id="30" class="modal-item-size" value="30" onclick="select_size(this.id)">30</div>
+		<div id="31" class="modal-item-size" value="31" onclick="select_size(this.id)">31</div>
+		<div id="32" class="modal-item-size" value="32" onclick="select_size(this.id)">32</div>
+	</div>
+	<div class="add-to-cart-container">
+		<button id="add-to-cart" type="button" class="btn" onclick="add_to_cart({{item.id}})">ADD TO CART</button>
+		<button id="back-from-info" type="button" class="btn" onclick="close_modal()">BACK</button>
+	</div>
+</div>
